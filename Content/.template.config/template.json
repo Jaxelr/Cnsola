@@ -4,7 +4,7 @@
     "classifications": [
         "Console"
     ],
-    "name": ".Net Core Console Custom Console Application",
+    "name": ".Net Core Custom Console Application",
     "identity": "Consola",
     "shortName": "consola",
     "tags": {
