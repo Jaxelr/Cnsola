@@ -25,7 +25,7 @@ namespace Consola
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Code Quality", "IDE0051:Remove unused private members", Justification = "Private member is invoked from .Execute<Program>")]
         private void OnExecute()
         {
-            Console.WriteLine($"Hello world!");
+            Console.WriteLine("Hello world!");
             Console.WriteLine($"{Settings.Example}");
 
             if (System.Diagnostics.Debugger.IsAttached)
