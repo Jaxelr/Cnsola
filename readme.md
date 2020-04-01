@@ -12,7 +12,7 @@ Dotnet template library used for console applications.
 
 | NuGet (Stable) | Feedz (Prerelease) |
 | :---: | :---: |
-| [![NuGet][nuget-img]][nuget] | [![feedz][feedz-img]][myget] |
+| [![NuGet][nuget-img]][nuget] | [![feedz][feedz-img]] |
 
 ### Purpose
 
@@ -24,7 +24,7 @@ For installation via the dotnet install command:
 
 `dotnet new -i "Consola::*"`
 
-For myget installations you can specify the source on the dotnet command:
+For the Feedz installations you can specify the source on the dotnet command:
 
 `dotnet new -i "Consola::*" --nuget-source https://f.feedz.io/jaxelr/consola/nuget/index.json`
 
