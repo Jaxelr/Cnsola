@@ -10,9 +10,9 @@ Dotnet template library used for console applications.
 
 ## Packages
 
-| NuGet (Stable) | Feedz (Prerelease) |
+| NuGet (Stable) | Feedz.io (Prerelease) |
 | :---: | :---: |
-| [![NuGet][nuget-img]][nuget] | [![Feedz][feedz-img]][feedz] |
+| [![NuGet][nuget-img]][nuget] | [![Feedz.io][feedz-img]][feedz] |
 
 ### Purpose
 
@@ -50,7 +50,7 @@ For further information on custom templates, refer to the [Microsoft documentati
 [build-img]: https://ci.appveyor.com/api/projects/status/4q831j12p00mkeij/branch/master?svg=true
 [build]: https://ci.appveyor.com/project/Jaxelr/consola/branch/master
 [nuget-img]: https://img.shields.io/nuget/v/Consola.svg
-[nuget]: https://www.nuget.org/packages/Consola/
+[nuget]: https://www.nuget.org/packages/Consola
 [feedz-img]: https://img.shields.io/badge/endpoint.svg?url=https://f.feedz.io/jaxelr/consola/shield/Consola/stable
 [feedz]: https://f.feedz.io/jaxelr/consola/packages/Consola/stable/download
 [docs]: https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates
