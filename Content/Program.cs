@@ -13,7 +13,7 @@ namespace Consola
         private static Settings Settings { get; set; }
         private static string env => Environment.GetEnvironmentVariable(EnvironmentVariable);
 
-        private static void Main(string[] args)
+        internal static void Main(string[] args)
         {
             Log.Logger = new LoggerConfiguration()
                                 .MinimumLevel.Information()
