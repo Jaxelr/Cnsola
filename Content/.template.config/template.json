@@ -5,12 +5,12 @@
         "Console"
     ],
     "name": ".Net Core Custom Console Application",
-    "identity": "Consola",
-    "shortName": "consola",
+    "identity": "Cnsola",
+    "shortName": "Cnsola",
     "tags": {
         "language": "C#"
     },
-    "sourceName": "Consola",
+    "sourceName": "Cnsola",
     "preferNameDirectory": true,
     "symbols":{
         "skipRestore": {
@@ -31,6 +31,6 @@
           "continueOnError": true
     }],
     "primaryOutputs": [
-        { "path": "Consola.csproj" }
+        { "path": "Cnsola.csproj" }
     ]
 }

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package>
   <metadata>
-    <id>Consola</id>
+    <id>Cnsola</id>
     <version>0.0.1</version>
-    <title>Consola</title>
+    <title>Cnsola</title>
     <description>Template for console applications with usual custom configurations to speed up development.</description>
     <authors>Jaxel Rojas</authors>
-    <projectUrl>https://github.com/Jaxelr/Consola</projectUrl>
+    <projectUrl>https://github.com/Jaxelr/Cnsola</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>Initial Version</releaseNotes>
     <copyright>2020</copyright>

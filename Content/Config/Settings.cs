@@ -1,4 +1,4 @@
-﻿namespace Consola
+﻿namespace Cnsola
 {
     public class Settings
     {

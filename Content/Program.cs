@@ -3,7 +3,7 @@ using McMaster.Extensions.CommandLineUtils;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 
-namespace Consola
+namespace Cnsola
 {
     internal class Program
     {

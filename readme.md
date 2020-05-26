@@ -1,4 +1,4 @@
-# Consola [![Mit License][mit-img]][mit]
+# Cnsola [![Mit License][mit-img]][mit]
 
 Dotnet template library used for console applications.
 
@@ -22,21 +22,21 @@ A scaffolded console application built on top of netcore 3.1. It provides the ba
 
 For installation via the dotnet install command:
 
-`dotnet new -i "Consola::*"`
+`dotnet new -i "Cnsola::*"`
 
 For the Feedz installations you can specify the source on the dotnet command:
 
-`dotnet new -i "Consola::*" --nuget-source https://f.feedz.io/jaxelr/consola/nuget/index.json`
+`dotnet new -i "Cnsola::*" --nuget-source https://f.feedz.io/jaxelr/cnsola/nuget/index.json`
 
 Then you can freely use it by executing the following dotnet command:
 
-`dotnet new consola -o MySampleConsole`
+`dotnet new cnsola -o MySampleConsole`
 
 ### Uninstall
 
 To uninstall simply execute:
 
-`dotnet new -u "Consola"`
+`dotnet new -u "Cnsola"`
 
 These projects target dotnet core 3.1. The following libraries are included as part of the projects:
 
@@ -46,11 +46,11 @@ These projects target dotnet core 3.1. The following libraries are included as p
 For further information on custom templates, refer to the [Microsoft documentation][docs].
 
 [mit-img]: http://img.shields.io/badge/License-MIT-blue.svg
-[mit]: https://github.com/Jaxelr/Consola/blob/master/LICENSE
+[mit]: https://github.com/Jaxelr/Cnsola/blob/master/LICENSE
 [build-img]: https://ci.appveyor.com/api/projects/status/4q831j12p00mkeij/branch/master?svg=true
-[build]: https://ci.appveyor.com/project/Jaxelr/consola/branch/master
-[nuget-img]: https://img.shields.io/nuget/v/Consola.svg
-[nuget]: https://www.nuget.org/packages/Consola
-[feedz-img]: https://img.shields.io/badge/endpoint.svg?url=https://f.feedz.io/jaxelr/consola/shield/Consola/stable
-[feedz]: https://f.feedz.io/jaxelr/consola/packages/Consola/stable/download
+[build]: https://ci.appveyor.com/project/Jaxelr/cnsola/branch/master
+[nuget-img]: https://img.shields.io/nuget/v/Cnsola.svg
+[nuget]: https://www.nuget.org/packages/Cnsola
+[feedz-img]: https://img.shields.io/badge/endpoint.svg?url=https://f.feedz.io/jaxelr/cnsola/shield/Cnsola/stable
+[feedz]: https://f.feedz.io/jaxelr/cnsola/packages/Cnsola/stable/download
 [docs]: https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates
