@@ -1,19 +1,17 @@
 ﻿using System;
-using McMaster.Extensions.CommandLineUtils;
-using Microsoft.Extensions.Configuration;
+using System.Threading.Tasks;
+using ConsoleAppFramework;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Serilog;
 
 namespace Cnsola
 {
-    internal class Program
+    internal static class Program
     {
-        internal const string EnvironmentVariable = "ASPNETCORE_ENVIRONMENT";
-
-        private static IConfiguration configuration { get; set; }
-        private static Settings Settings { get; set; }
-        private static string env => Environment.GetEnvironmentVariable(EnvironmentVariable);
-
-        internal static void Main(string[] args)
+        internal async static Task Main(string[] args)
         {
             Log.Logger = new LoggerConfiguration()
                                 .MinimumLevel.Information()
@@ -21,34 +19,42 @@ namespace Cnsola
                                 .WriteTo.Console()
                                 .CreateLogger();
 
-            configuration = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json", true, true)
-                .AddJsonFile($"appsettings{env}.json", true, true)
-                .Build();
-
-            //Extract the Settings info from the appsettings config.
-            Settings = new Settings();
-            configuration.GetSection(nameof(Settings)).Bind(Settings);
-
-            CommandLineApplication.Execute<Program>(args);
+            await Host.CreateDefaultBuilder()
+                .UseSerilog()
+                .ConfigureServices((hostContext, services) =>
+                {
+                    services.Configure<Settings>(hostContext.Configuration.GetSection("Settings"));
+                })
+                .RunConsoleAppFrameworkAsync<Cnsola>(args);
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Code Quality", "IDE0051:Remove unused private members", Justification = "Private member is invoked from .Execute<Program>")]
-        private void OnExecute()
+        public class Cnsola : ConsoleAppBase
         {
-            try
-            {
-                Log.Logger.Information($"Environment used: {env}");
-                Log.Logger.Information("Hello world!");
-                Log.Logger.Information($"{Settings.Example}");
+            internal const string EnvironmentVariable = "ASPNETCORE_ENVIRONMENT";
+            private static string env => Environment.GetEnvironmentVariable(EnvironmentVariable);
 
-                if (System.Diagnostics.Debugger.IsAttached)
-                    Console.Read();
-            }
-            catch (Exception ex)
+            private readonly IOptions<Settings> settings;
+
+            private readonly ILogger<Cnsola> logger;
+
+            public Cnsola(IOptions<Settings> settings, ILogger<Cnsola> logger) => (this.settings, this.logger) = (settings, logger);
+
+            public void Run()
             {
-                Log.Error(ex.Message);
-                Environment.Exit(1);
+                try
+                {
+                    logger.LogInformation($"Environment used: {env}");
+                    logger.LogInformation("Hello world!");
+                    logger.LogInformation($"{settings.Value.Example}");
+
+                    if (System.Diagnostics.Debugger.IsAttached)
+                        Console.Read();
+                }
+                catch (Exception ex)
+                {
+                    logger.LogError(ex.Message);
+                    Environment.Exit(1);
+                }
             }
         }
     }
