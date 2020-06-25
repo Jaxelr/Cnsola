@@ -29,7 +29,8 @@ namespace Cnsola
                 {
                     services.Configure<Settings>(hostContext.Configuration.GetSection("Settings"));
                 })
-                .RunConsoleAppFrameworkAsync<Cnsola>(args);
+                .RunConsoleAppFrameworkAsync<Cnsola>(args)
+                .ConfigureAwait(false);
         }
 
         public class Cnsola : ConsoleAppBase
