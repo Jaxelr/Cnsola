@@ -6,7 +6,7 @@
     ],
     "name": ".Net Core Custom Console Application",
     "identity": "Cnsola",
-    "shortName": "Cnsola",
+    "shortName": "cnsola",
     "tags": {
         "language": "C#"
     },
