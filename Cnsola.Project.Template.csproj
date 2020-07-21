@@ -5,7 +5,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageType>Template</PackageType>
     <IsPackable>true</IsPackable>
-    <PackageVersion>0.0.1</PackageVersion>
+    <Version>0.0.1</Version>
     <PackageId>Cnsola</PackageId>
     <PackageCopyright>2020</PackageCopyright>
     <Title>Cnsla</Title>
@@ -18,7 +18,8 @@
     <ContentTargetFolders>Content</ContentTargetFolders>    
     <NoDefaultExcludes>true</NoDefaultExcludes>
     <NoWarn>NU5128</NoWarn>    
-    <PackageReleaseNotes>Initial library</PackageReleaseNotes>
+    <PackageReleaseNotes>Initial library</PackageReleaseNotes>    
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
