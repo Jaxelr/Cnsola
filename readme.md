@@ -40,7 +40,7 @@ To uninstall simply execute:
 
 These projects target dotnet core 3.1. The following libraries are included as part of the projects:
 
-* [McMaster.Extensions.CommandLineUtils](https://github.com/natemcmaster/CommandLineUtils)
+* [ConsoleAppFramework](https://github.com/Cysharp/ConsoleAppFramework)
 * [Serilog.AspNetCore](https://github.com/serilog/serilog-aspnetcore)
 
 For further information on custom templates, refer to the [Microsoft documentation][docs].
