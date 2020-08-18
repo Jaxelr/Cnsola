@@ -47,7 +47,7 @@ For further information on custom templates, refer to the [Microsoft documentati
 
 [mit-img]: http://img.shields.io/badge/License-MIT-blue.svg
 [mit]: https://github.com/Jaxelr/Cnsola/blob/master/LICENSE
-[build-img]: https://ci.appveyor.com/api/projects/status/4q831j12p00mkeij/branch/master?svg=true
+[build-img]: https://ci.appveyor.com/api/projects/status/i6894qg3nyev6cye/branch/master?svg=true
 [build]: https://ci.appveyor.com/project/Jaxelr/cnsola/branch/master
 [nuget-img]: https://img.shields.io/nuget/v/Cnsola.svg
 [nuget]: https://www.nuget.org/packages/Cnsola
