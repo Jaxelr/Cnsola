@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="ConsoleAppFramework" Version="2.4.0" />
-    <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
   </ItemGroup>
 
   <ItemGroup>
