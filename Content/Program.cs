@@ -14,13 +14,7 @@ namespace Cnsola
         internal const string EnvironmentVariable = "ASPNETCORE_ENVIRONMENT";
         private static string env => Environment.GetEnvironmentVariable(EnvironmentVariable);
 
-        internal async static Task Main(string[] args)
-        {
-            Log.Logger = new LoggerConfiguration()
-                                .MinimumLevel.Information()
-                                .Enrich.FromLogContext()
-                                .WriteTo.Console()
-                                .CreateLogger();
+        internal async static Task Main(string[] args) =>
 
             await Host.CreateDefaultBuilder()
                 .UseEnvironment(env)
@@ -28,10 +22,13 @@ namespace Cnsola
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.Configure<Settings>(hostContext.Configuration.GetSection("Settings"));
+
+                    Log.Logger = new LoggerConfiguration()
+                        .ReadFrom.Configuration(hostContext.Configuration)
+                        .CreateLogger();
                 })
-                .RunConsoleAppFrameworkAsync<Cnsola>(args)
-                .ConfigureAwait(false);
-        }
+                .RunConsoleAppFrameworkAsync<Cnsola>(args);
+
 
         public class Cnsola : ConsoleAppBase
         {
@@ -45,7 +42,6 @@ namespace Cnsola
             {
                 try
                 {
-
                     logger.LogInformation($"Environment used: {env}");
                     logger.LogInformation("Hello world!");
                     logger.LogInformation($"{settings.Value.Example}");
