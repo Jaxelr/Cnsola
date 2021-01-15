@@ -16,7 +16,7 @@ Dotnet template library used for console applications.
 
 ### Purpose
 
-A scaffolded console application built on top of netcore 3.1. It provides the basic tools for managing console arguments, logging and configuration management.
+A scaffolded console application built on top of net 5.0. It provides the basic tools for managing console arguments, logging and configuration management.
 
 ### Install
 
@@ -38,7 +38,7 @@ To uninstall simply execute:
 
 `dotnet new -u "Cnsola"`
 
-These projects target dotnet core 3.1. The following libraries are included as part of the projects:
+These projects target dotnet 5.0. The following libraries are included as part of the projects:
 
 * [ConsoleAppFramework](https://github.com/Cysharp/ConsoleAppFramework)
 * [Serilog.AspNetCore](https://github.com/serilog/serilog-aspnetcore)
