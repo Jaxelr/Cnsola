@@ -29,7 +29,6 @@ namespace Cnsola
                 })
                 .RunConsoleAppFrameworkAsync<Cnsola>(args);
 
-
         public class Cnsola : ConsoleAppBase
         {
             private readonly IOptions<Settings> settings;
@@ -42,9 +41,9 @@ namespace Cnsola
             {
                 try
                 {
-                    logger.LogInformation($"Environment used: {env}");
+                    logger.LogInformation("Environment used: {0}", env);
                     logger.LogInformation("Hello world!");
-                    logger.LogInformation($"{settings.Value.Example}");
+                    logger.LogInformation("{0}", settings.Value.Example);
 
                     if (System.Diagnostics.Debugger.IsAttached)
                         Console.Read();
