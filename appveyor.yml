@@ -3,13 +3,12 @@ image: Visual Studio 2019
 branches:
   only:
   - master
-  - develop
 init:
   - cmd: git config --global core.autocrlf true
 configuration:
   - Release
 nuget:
-  disable_publish_on_pr: true  
+  disable_publish_on_pr: true
 before_build:
   - cmd: dotnet --version
 build_script:
@@ -25,7 +24,6 @@ deploy:
   server: https://f.feedz.io/jaxelr/cnsola/nuget/index.json
   on:
     branch: master
-    appveyor_repo_tag: true
   api_key:
     secure: JGY8cM2ylez85zRpc/zQHPrRZzAzQ5zbJgwVD3gtH0Yk1zKBi8pIomdENBbtXhJM
   skip_symbols: true
