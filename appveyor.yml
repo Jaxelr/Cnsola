@@ -14,6 +14,7 @@ before_build:
   - cmd: dotnet --version
 build_script:
   - cmd: dotnet build ./Content/Cnsola.csproj -v quiet
+  - cmd: dotnet pack -v quiet
 artifacts:
   - path: '**/*.nupkg'
 skip_commits:
