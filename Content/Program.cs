@@ -51,7 +51,6 @@ namespace Cnsola
                 catch (Exception ex)
                 {
                     logger.LogError(ex.Message);
-                    Environment.Exit(1);
                 }
             }
         }
