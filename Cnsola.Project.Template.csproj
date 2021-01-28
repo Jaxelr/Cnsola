@@ -7,7 +7,7 @@
     <IsPackable>true</IsPackable>
     <Version>0.0.2</Version>
     <PackageId>Cnsola</PackageId>
-    <PackageCopyright>2020</PackageCopyright>
+    <PackageCopyright>2021</PackageCopyright>
     <Title>Cnsla</Title>
     <Authors>Jaxel Rojas</Authors>
     <Description>Template for console applications with usual custom configurations to speed up development</Description>
@@ -18,7 +18,7 @@
     <ContentTargetFolders>Content</ContentTargetFolders>
     <NoDefaultExcludes>true</NoDefaultExcludes>
     <NoWarn>NU5128</NoWarn>
-    <PackageReleaseNotes>Migration to Net Framework 5.0</PackageReleaseNotes>
+    <PackageReleaseNotes>Migration to Net 5.0</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
