@@ -10,9 +10,9 @@ Dotnet template library used for console applications.
 
 ## Packages
 
-| NuGet (Stable) | Feedz.io (Prerelease) |
+| NuGet (Stable) | Feedz.io (Mirror) | MyGet (Pre-release)
 | :---: | :---: |
-| [![NuGet][nuget-img]][nuget] | [![Feedz.io][feedz-img]][feedz] |
+| [![NuGet][nuget-img]][nuget] | [![Feedz.io][feedz-img]][feedz] | [![MyGet][myget-img]][myget] |
 
 ### Purpose
 
@@ -54,3 +54,5 @@ For further information on custom templates, refer to the [Microsoft documentati
 [feedz-img]: https://img.shields.io/badge/endpoint.svg?url=https://f.feedz.io/jaxelr/cnsola/shield/Cnsola/stable
 [feedz]: https://f.feedz.io/jaxelr/cnsola/packages/Cnsola/stable/download
 [docs]: https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates
+[myget-img]: https://img.shields.io/myget/cnsola/v/cnsola.svg
+[myget]: https://www.myget.org/feed/cnsola/package/nuget/cnsola
