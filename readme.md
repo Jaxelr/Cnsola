@@ -11,7 +11,7 @@ Dotnet template library used for console applications.
 ## Packages
 
 | NuGet (Stable) | Feedz.io (Mirror) | MyGet (Pre-release)
-| :---: | :---: |
+| :---: | :---: | :---: |
 | [![NuGet][nuget-img]][nuget] | [![Feedz.io][feedz-img]][feedz] | [![MyGet][myget-img]][myget] |
 
 ### Purpose
