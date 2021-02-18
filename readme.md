@@ -4,9 +4,9 @@ Dotnet template library used for console applications.
 
 ## Builds
 
-| Appveyor  |
-| :---:     |
-| [![Build status][build-img]][build] |
+| Appveyor  | Github |
+| :---:     | :---: |
+| [![Build status][build-img]][build] | ![.NET](https://github.com/Jaxelr/Cnsola/workflows/.NET/badge.svg?branch=master) |
 
 ## Packages
 
