@@ -1,6 +1,6 @@
 # Cnsola [![Mit License][mit-img]][mit]
 
-Dotnet template library used for console applications.
+Dotnet template library used for console apps. 
 
 ## Builds
 
@@ -24,7 +24,7 @@ For installation via the dotnet install command:
 
 `dotnet new -i "Cnsola::*"`
 
-For the Feedz installations you can specify the source on the dotnet command:
+For the Feedz (mirror) or Myget (pre-release) installations you can specify the source on the dotnet command:
 
 `dotnet new -i "Cnsola::*" --nuget-source https://f.feedz.io/jaxelr/cnsola/nuget/index.json`
 
@@ -38,7 +38,7 @@ To uninstall simply execute:
 
 `dotnet new -u "Cnsola"`
 
-These projects target dotnet 5.0. The following libraries are included as part of the projects:
+This template target dotnet 5.0. The following libraries are included as part of the solution:
 
 * [ConsoleAppFramework](https://github.com/Cysharp/ConsoleAppFramework)
 * [Serilog.AspNetCore](https://github.com/serilog/serilog-aspnetcore)
