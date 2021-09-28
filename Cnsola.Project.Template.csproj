@@ -19,11 +19,18 @@
     <NoDefaultExcludes>true</NoDefaultExcludes>
     <NoWarn>NU5128</NoWarn>
     <PackageReleaseNotes>Migration to Net 5.0</PackageReleaseNotes>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
     <Content Include="Content\**" Exclude="**\.vs\**;**\bin\**;**\obj\**;**\*.user;**\*.lock.json;**\node_modules\**;**\.vscode\**;**\wwwroot\**" />
     <Compile Remove="**\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 </Project>
