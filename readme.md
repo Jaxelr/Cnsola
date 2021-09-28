@@ -38,7 +38,7 @@ To uninstall simply execute:
 
 `dotnet new -u "Cnsola"`
 
-This template target dotnet 5.0. The following libraries are included as part of the solution:
+This template targets dotnet 5.0. The following libraries are included as part of the solution:
 
 * [ConsoleAppFramework](https://github.com/Cysharp/ConsoleAppFramework)
 * [Serilog.AspNetCore](https://github.com/serilog/serilog-aspnetcore)
