@@ -1,6 +1,6 @@
 # Cnsola [![Mit License][mit-img]][mit]
 
-Dotnet template library used for console apps. 
+Minimal dotnet template library for console utilities. 
 
 ## Builds
 
@@ -16,9 +16,9 @@ Dotnet template library used for console apps.
 
 ### Purpose
 
-A scaffolded console application built on top of net 5.0. It provides the basic tools for managing console arguments, logging and configuration management.
+A scaffolded console application built on top of net 5.0. It provides the basic tools for handling of console arguments, logging into multiple destinations and configuration management.
 
-### Install
+### Installation
 
 For installation via the dotnet install command:
 
@@ -28,13 +28,13 @@ For the Feedz (mirror) or Myget (pre-release) installations you can specify the 
 
 `dotnet new -i "Cnsola::*" --nuget-source https://f.feedz.io/jaxelr/cnsola/nuget/index.json`
 
-Then you can freely use it by executing the following dotnet command:
+Then you can freely create templates by executing the following dotnet command:
 
 `dotnet new cnsola -o MySampleConsole`
 
-### Uninstall
+### Uninstallation
 
-To uninstall simply execute:
+To uninstall execute:
 
 `dotnet new -u "Cnsola"`
 
