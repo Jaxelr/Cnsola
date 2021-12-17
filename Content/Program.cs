@@ -50,7 +50,7 @@ namespace Cnsola
                 }
                 catch (Exception ex)
                 {
-                    logger.LogError(ex.Message);
+                    logger.LogError(ex, "Error executing Cnsola.exe");
                 }
             }
         }
