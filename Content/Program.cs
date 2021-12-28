@@ -1,10 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using ConsoleAppFramework;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Serilog;
 
 namespace Cnsola
@@ -12,12 +9,12 @@ namespace Cnsola
     internal static class Program
     {
         internal const string EnvironmentVariable = "ASPNETCORE_ENVIRONMENT";
-        private static string env => Environment.GetEnvironmentVariable(EnvironmentVariable);
+        internal static string Environment => System.Environment.GetEnvironmentVariable(EnvironmentVariable);
 
-        internal async static Task Main(string[] args) =>
+        internal static async Task Main(string[] args) =>
 
             await Host.CreateDefaultBuilder()
-                .UseEnvironment(env)
+                .UseEnvironment(Environment)
                 .UseSerilog()
                 .ConfigureServices((hostContext, services) =>
                 {
@@ -28,31 +25,5 @@ namespace Cnsola
                         .CreateLogger();
                 })
                 .RunConsoleAppFrameworkAsync<Cnsola>(args);
-
-        public class Cnsola : ConsoleAppBase
-        {
-            private readonly IOptions<Settings> settings;
-
-            private readonly ILogger<Cnsola> logger;
-
-            public Cnsola(IOptions<Settings> settings, ILogger<Cnsola> logger) => (this.settings, this.logger) = (settings, logger);
-
-            public void Run()
-            {
-                try
-                {
-                    logger.LogInformation("Environment used: {0}", env);
-                    logger.LogInformation("Hello world!");
-                    logger.LogInformation("{0}", settings.Value.Example);
-
-                    if (System.Diagnostics.Debugger.IsAttached)
-                        Console.Read();
-                }
-                catch (Exception ex)
-                {
-                    logger.LogError(ex, "Error executing Cnsola.exe");
-                }
-            }
-        }
     }
 }
