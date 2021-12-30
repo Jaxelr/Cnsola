@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageType>Template</PackageType>
     <IsPackable>true</IsPackable>
-    <Version>0.0.4</Version>
+    <Version>0.0.5</Version>
     <PackageId>Cnsola</PackageId>
-    <PackageCopyright>2021</PackageCopyright>
+    <PackageCopyright>2022</PackageCopyright>
     <Title>Cnsla</Title>
     <Authors>Jaxel Rojas</Authors>
     <Description>Template for console applications with usual custom configurations to speed up development</Description>
@@ -18,7 +18,7 @@
     <ContentTargetFolders>Content</ContentTargetFolders>
     <NoDefaultExcludes>true</NoDefaultExcludes>
     <NoWarn>NU5128</NoWarn>
-    <PackageReleaseNotes>Migration to Net 5.0</PackageReleaseNotes>
+    <PackageReleaseNotes>Migration to Net 6.0</PackageReleaseNotes>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
