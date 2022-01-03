@@ -1,7 +1,6 @@
-﻿namespace Cnsola
+﻿namespace Cnsola;
+
+public class Settings
 {
-    public class Settings
-    {
-        public string Example { get; set; }
-    }
+    public string Example { get; set; }
 }

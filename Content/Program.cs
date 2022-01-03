@@ -1,29 +1,22 @@
-﻿using System.Threading.Tasks;
-using ConsoleAppFramework;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 
-namespace Cnsola
+var builder = ConsoleApp.CreateBuilder(args);
+
+builder.UseSerilog();
+builder.UseEnvironment(EnvironmentValue);
+
+builder.ConfigureServices((ctx, services) =>
 {
-    internal static class Program
-    {
-        internal const string EnvironmentVariable = "ASPNETCORE_ENVIRONMENT";
-        internal static string Environment => System.Environment.GetEnvironmentVariable(EnvironmentVariable);
+    services.Configure<Settings>(ctx.Configuration.GetSection("Settings"));
 
-        internal static async Task Main(string[] args) =>
+    Log.Logger = new LoggerConfiguration()
+        .ReadFrom.Configuration(ctx.Configuration)
+        .CreateLogger();
+});
 
-            await Host.CreateDefaultBuilder()
-                .UseEnvironment(Environment)
-                .UseSerilog()
-                .ConfigureServices((hostContext, services) =>
-                {
-                    services.Configure<Settings>(hostContext.Configuration.GetSection("Settings"));
+var app = builder.Build();
 
-                    Log.Logger = new LoggerConfiguration()
-                        .ReadFrom.Configuration(hostContext.Configuration)
-                        .CreateLogger();
-                })
-                .RunConsoleAppFrameworkAsync<Cnsola>(args);
-    }
-}
+app.AddSubCommands<Execution>();
+
+app.Run();
