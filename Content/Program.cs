@@ -4,7 +4,7 @@ using Serilog;
 var builder = ConsoleApp.CreateBuilder(args);
 
 builder.UseSerilog();
-builder.UseEnvironment(EnvironmentValue);
+builder.UseEnvironment(Environment.EnvironmentValue);
 
 builder.ConfigureServices((ctx, services) =>
 {

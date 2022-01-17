@@ -1,6 +1,6 @@
 ﻿namespace Cnsola;
 
-public class Settings
+public record Settings
 {
-    public string Example { get; set; }
+    public string Example { get; init; } = string.Empty;
 }

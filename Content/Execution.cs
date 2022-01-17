@@ -17,7 +17,7 @@ public class Execution : ConsoleAppBase
     {
         try
         {
-            logger.LogInformation("Environment used: {EnvironmentValue}", EnvironmentValue);
+            logger.LogInformation("Environment used: {EnvironmentValue}", Environment.EnvironmentValue);
             logger.LogInformation("Hello world!");
             logger.LogInformation("{Example}", settings.Value.Example);
 
