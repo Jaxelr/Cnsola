@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ConsoleAppFramework" Version="4.0.6" />
+    <PackageReference Include="ConsoleAppFramework" Version="4.1.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
   </ItemGroup>
 
