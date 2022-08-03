@@ -19,4 +19,4 @@ var app = builder.Build();
 
 app.AddSubCommands<Execution>();
 
-app.Run();
+app.RunAsync();
