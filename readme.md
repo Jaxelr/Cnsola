@@ -42,7 +42,8 @@ This template targets versions are:
 
 | net version | template version |
 | -- | -- |
-| 6.0 | latest |
+| 7.0 | latest |
+| 6.0 | 0.0.9 |
 | 5.0 | 0.0.4 |
 | 3.1 | 0.0.1 |
 
