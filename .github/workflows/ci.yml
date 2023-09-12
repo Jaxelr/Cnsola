@@ -17,7 +17,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build Content\Cnsola.csproj
+      run: dotnet build Content/Cnsola.csproj
     - name: Pack
       run: dotnet pack Cnsola.Project.Template.csproj -o $NUPKGS --include-symbols
     - if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || contains(github.ref, 'tags'))
