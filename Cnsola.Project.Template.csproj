@@ -5,7 +5,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageType>Template</PackageType>
     <IsPackable>true</IsPackable>
-    <Version>0.1.1</Version>
+    <Version>0.1.2</Version>
     <PackageId>Cnsola</PackageId>
     <PackageCopyright>2023</PackageCopyright>
     <Title>Cnsla</Title>
@@ -18,14 +18,15 @@
     <ContentTargetFolders>Content</ContentTargetFolders>
     <NoDefaultExcludes>true</NoDefaultExcludes>
     <NoWarn>NU5128</NoWarn>
-    <PackageReleaseNotes>Migration to Net 7.0</PackageReleaseNotes>
+    <PackageReleaseNotes>Minor style fixes</PackageReleaseNotes>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Content\**" Exclude="**\.vs\**;**\bin\**;**\obj\**;**\*.user;**\*.lock.json;**\node_modules\**;**\.vscode\**;**\wwwroot\**;**\MSBuild_Logs\**" />
-    <Compile Remove="**\*" />
+    <Compile Remove="Content\obj\**" />
+    <None Remove="Content\obj\**" />
+    <None Remove="**\bin\**;**\MSBuild_Logs\**" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.md">
