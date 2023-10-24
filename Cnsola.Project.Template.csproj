@@ -1,37 +1,38 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageType>Template</PackageType>
+		<IsPackable>true</IsPackable>
+		<Version>0.1.2</Version>
+		<PackageId>Cnsola</PackageId>
+		<PackageCopyright>2023</PackageCopyright>
+		<Title>Cnsla</Title>
+		<Authors>Jaxel Rojas</Authors>
+		<Description>Template for console applications with usual custom configurations to speed up development</Description>
+		<PackageTags>template;console;</PackageTags>
+		<PackageProjectUrl>https://github.com/Jaxelr/Cnsola</PackageProjectUrl>
+		<IncludeContentInPack>true</IncludeContentInPack>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<ContentTargetFolders>Content</ContentTargetFolders>
+		<NoDefaultExcludes>true</NoDefaultExcludes>
+		<NoWarn>NU5128</NoWarn>
+		<PackageReleaseNotes>Minor style fixes</PackageReleaseNotes>
+		<PackageReadmeFile>readme.md</PackageReadmeFile>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageType>Template</PackageType>
-    <IsPackable>true</IsPackable>
-    <Version>0.1.2</Version>
-    <PackageId>Cnsola</PackageId>
-    <PackageCopyright>2023</PackageCopyright>
-    <Title>Cnsla</Title>
-    <Authors>Jaxel Rojas</Authors>
-    <Description>Template for console applications with usual custom configurations to speed up development</Description>
-    <PackageTags>template;console;</PackageTags>
-    <PackageProjectUrl>https://github.com/Jaxelr/Cnsola</PackageProjectUrl>
-    <IncludeContentInPack>true</IncludeContentInPack>
-    <IncludeBuildOutput>false</IncludeBuildOutput>
-    <ContentTargetFolders>Content</ContentTargetFolders>
-    <NoDefaultExcludes>true</NoDefaultExcludes>
-    <NoWarn>NU5128</NoWarn>
-    <PackageReleaseNotes>Minor style fixes</PackageReleaseNotes>
-    <PackageReadmeFile>readme.md</PackageReadmeFile>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Content\obj\**" />
-    <None Remove="Content\obj\**" />
-    <None Remove="**\bin\**;**\MSBuild_Logs\**" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="readme.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<Content Include="Content\**" Exclude="**\.vs\**;**\bin\**;**\obj\**;**\*.user;**\*.lock.json;**\node_modules\**;**\.vscode\**;**\wwwroot\**;**\MSBuild_Logs\**" />
+		<Compile Remove="**\*" />
+		<Compile Remove="MSBuild_Logs\**" />
+		<EmbeddedResource Remove="MSBuild_Logs\**" />
+		<None Remove="**\bin\**;**\obj\**;**\MSBuild_Logs\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="readme.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 </Project>
