@@ -10,9 +10,9 @@ Minimal dotnet template library for console utilities.
 
 ## Packages
 
-| NuGet (Stable) | Feedz.io (Mirror) | MyGet (Pre-release)
-| :---: | :---: | :---: |
-| [![NuGet][nuget-img]][nuget] | [![Feedz.io][feedz-img]][feedz] | [![MyGet][myget-img]][myget] |
+| NuGet (Stable) | MyGet (Pre-release)
+| :---: | :---: |
+| [![NuGet][nuget-img]][nuget] | [![MyGet][myget-img]][myget] |
 
 ### Purpose
 
@@ -22,11 +22,11 @@ A scaffolded console application built on top of dotnet. It provides the basic t
 
 For installation via the dotnet install command:
 
-`dotnet new -i "Cnsola::*"`
+`dotnet new install "Cnsola::*"`
 
 For the Feedz (mirror) or Myget (pre-release) installations you can specify the source on the dotnet command:
 
-`dotnet new -i "Cnsola::*" --nuget-source https://f.feedz.io/jaxelr/cnsola/nuget/index.json`
+`dotnet new install "Cnsola::*" --nuget-source https://www.myget.org/F/cnsola/api/v3/index.json`
 
 Then you can freely create templates by executing the following dotnet command:
 
@@ -36,7 +36,7 @@ Then you can freely create templates by executing the following dotnet command:
 
 To uninstall execute:
 
-`dotnet new -u "Cnsola"`
+`dotnet new uninstall "Cnsola"`
 
 This template targets versions are:
 
@@ -61,8 +61,6 @@ For further information on custom templates, refer to the [Microsoft documentati
 [build]: https://ci.appveyor.com/project/Jaxelr/cnsola/branch/master
 [nuget-img]: https://img.shields.io/nuget/v/Cnsola.svg
 [nuget]: https://www.nuget.org/packages/Cnsola
-[feedz-img]: https://img.shields.io/badge/endpoint.svg?url=https://f.feedz.io/jaxelr/cnsola/shield/Cnsola/stable
-[feedz]: https://f.feedz.io/jaxelr/cnsola/packages/Cnsola/stable/download
 [docs]: https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates
 [myget-img]: https://img.shields.io/myget/cnsola/v/cnsola.svg
 [myget]: https://www.myget.org/feed/cnsola/package/nuget/cnsola
