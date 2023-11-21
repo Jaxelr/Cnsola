@@ -4,9 +4,9 @@ Minimal dotnet template library for console utilities.
 
 ## Builds
 
-| Appveyor  | Github |
-| :---:     | :---: |
-| [![Build status][build-img]][build] | ![.NET](https://github.com/Jaxelr/Cnsola/workflows/.NET/badge.svg?branch=master) |
+| Github |
+| :---: |
+| ![.NET](https://github.com/Jaxelr/Cnsola/workflows/.NET/badge.svg?branch=master) |
 
 ## Packages
 
