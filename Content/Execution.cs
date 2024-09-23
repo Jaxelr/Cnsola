@@ -4,7 +4,7 @@ using Microsoft.Extensions.Options;
 
 namespace Cnsola;
 
-public class Execution : ConsoleAppBase
+public class Execution
 {
     private readonly IOptions<Settings> settings;
 
@@ -12,7 +12,7 @@ public class Execution : ConsoleAppBase
 
     public Execution(IOptions<Settings> settings, ILogger<Execution> logger) => (this.settings, this.logger) = (settings, logger);
 
-    [RootCommand]
+    [Command("")]
     public void Run()
     {
         try
