@@ -1,7 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Serilog;
 
-var builder = ConsoleApp.CreateBuilder(args);
+var builder = Host.CreateDefaultBuilder();
 
 builder.UseSerilog();
 builder.UseEnvironment(Environment.EnvironmentValue);
@@ -15,8 +16,12 @@ builder.ConfigureServices((ctx, services) =>
         .CreateLogger();
 });
 
-var app = builder.Build();
+using var host  = builder.Build();
 
-app.AddSubCommands<Execution>();
+ConsoleApp.ServiceProvider = host.Services.CreateScope().ServiceProvider;
 
-await app.RunAsync();
+var app = ConsoleApp.Create();
+
+app.Add<Execution>();
+
+await app.RunAsync(args);
