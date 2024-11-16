@@ -4,7 +4,7 @@
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageType>Template</PackageType>
 		<IsPackable>true</IsPackable>
-		<Version>0.3.0</Version>
+		<Version>0.4.0</Version>
 		<PackageId>Cnsola</PackageId>
 		<PackageCopyright>2024</PackageCopyright>
 		<Title>Cnsla</Title>
