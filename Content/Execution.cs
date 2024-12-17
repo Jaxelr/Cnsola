@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Cnsola.Config;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
@@ -22,9 +22,9 @@ public class Execution
             logger.LogInformation("{Example}", settings.Value.Example);
 
             if (System.Diagnostics.Debugger.IsAttached)
-                Console.Read();
+                System.Console.Read();
         }
-        catch (Exception ex)
+        catch (System.Exception ex)
         {
             logger.LogError(ex, "Error executing Cnsola.exe");
         }

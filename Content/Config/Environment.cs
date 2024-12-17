@@ -1,4 +1,4 @@
-﻿namespace Cnsola;
+﻿namespace Cnsola.Config;
 
 public static class Environment
 {
