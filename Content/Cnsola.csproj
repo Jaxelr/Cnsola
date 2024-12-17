@@ -5,6 +5,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <RootNamespace>Cnsola</RootNamespace>
     <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
     <PublishSingleFile Condition="'$(Configuration)' == 'Release'">true</PublishSingleFile>
   </PropertyGroup>
 
