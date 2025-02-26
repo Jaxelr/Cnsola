@@ -17,11 +17,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ConsoleAppFramework" Version="5.3.4">
+    <PackageReference Include="ConsoleAppFramework" Version="5.4.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Cnsola" />
+    <Using Include="ConsoleAppFramework" />
   </ItemGroup>
 
   <ItemGroup>
