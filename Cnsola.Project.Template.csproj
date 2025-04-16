@@ -7,7 +7,7 @@
 		<Version>0.4.3</Version>
 		<PackageId>Cnsola</PackageId>
 		<PackageCopyright>2025</PackageCopyright>
-		<Title>Cnsla</Title>
+		<Title>Cnsola</Title>
 		<Authors>Jaxel Rojas</Authors>
 		<Description>Template for console applications with usual custom configurations to speed up development</Description>
 		<PackageTags>template;console;</PackageTags>
@@ -18,7 +18,7 @@
 		<NoDefaultExcludes>true</NoDefaultExcludes>
 		<NoWarn>NU5128</NoWarn>
 		<PackageReleaseNotes>Update package dependencies to latest version</PackageReleaseNotes>
-		<PackageReadmeFile>readme.md</PackageReadmeFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 
@@ -30,7 +30,7 @@
 		<None Remove="**\bin\**;**\obj\**;**\MSBuild_Logs\**" />
 	</ItemGroup>
 	<ItemGroup>
-		<None Include="readme.md">
+		<None Include="README.md">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
