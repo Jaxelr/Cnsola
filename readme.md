@@ -6,7 +6,7 @@ Minimal dotnet template library for console utilities.
 
 | Github |
 | :---: |
-| ![.NET](https://github.com/Jaxelr/Cnsola/workflows/.NET/badge.svg?branch=master) |
+| [![.NET](https://github.com/Jaxelr/Cnsola/actions/workflows/ci.yml/badge.svg)](https://github.com/Jaxelr/Cnsola/actions/workflows/ci.yml) |
 
 ## Packages
 
