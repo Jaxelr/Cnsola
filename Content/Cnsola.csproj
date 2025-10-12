@@ -8,11 +8,10 @@
     <LangVersion>latest</LangVersion>
     <PublishSingleFile Condition="'$(Configuration)' == 'Release'">true</PublishSingleFile>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="MSBuild_Logs\**" />
-    <EmbeddedResource Remove="MSBuild_Logs\**" />
     <None Remove="MSBuild_Logs\**" />
   </ItemGroup>
 
