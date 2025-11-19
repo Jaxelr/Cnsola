@@ -42,12 +42,13 @@ This template targets versions are:
 
 | net version | template version |
 | -- | -- |
-| 9.0 | latest |
-| 8.0 | 0.3.0 |
-| 7.0 | 0.1.2 |
-| 6.0 | 0.0.9 |
-| 5.0 | 0.0.4 |
-| 3.1 | 0.0.1 |
+| 10.0 | latest |
+| 9.0  | 0.4.6  |
+| 8.0  | 0.3.0  |
+| 7.0  | 0.1.2  |
+| 6.0  | 0.0.9  |
+| 5.0  | 0.0.4  |
+| 3.1  | 0.0.1  |
 
 The following libraries are included as part of the solution:
 
