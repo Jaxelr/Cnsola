@@ -4,9 +4,9 @@
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageType>Template</PackageType>
 		<IsPackable>true</IsPackable>
-		<Version>0.5.0</Version>
+		<Version>0.5.1</Version>
 		<PackageId>Cnsola</PackageId>
-		<PackageCopyright>2025</PackageCopyright>
+		<PackageCopyright>2026</PackageCopyright>
 		<Title>Cnsola</Title>
 		<Authors>Jaxel Rojas</Authors>
 		<Description>Template for console applications with usual custom configurations to speed up development</Description>
