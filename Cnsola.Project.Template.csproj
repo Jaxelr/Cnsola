@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net10.0</TargetFramework>
+		<TargetFramework>net11.0</TargetFramework>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageType>Template</PackageType>
 		<IsPackable>true</IsPackable>
-		<Version>0.5.1</Version>
+		<Version>0.6.0</Version>
 		<PackageId>Cnsola</PackageId>
 		<PackageCopyright>2026</PackageCopyright>
 		<Title>Cnsola</Title>
@@ -17,8 +17,8 @@
 		<ContentTargetFolders>Content</ContentTargetFolders>
 		<NoDefaultExcludes>true</NoDefaultExcludes>
 		<NoWarn>NU5128</NoWarn>
-		<PackageReleaseNotes>Update template to dotnet 10</PackageReleaseNotes>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageReleaseNotes>Update template to dotnet 11</PackageReleaseNotes>
+		<PackageReadmeFile>readme.md</PackageReadmeFile>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 
@@ -30,7 +30,7 @@
 		<None Remove="**\bin\**;**\obj\**;**\MSBuild_Logs\**" />
 	</ItemGroup>
 	<ItemGroup>
-		<None Include="README.md">
+		<None Include="readme.md">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>

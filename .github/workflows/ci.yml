@@ -13,14 +13,14 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v5
       with:
-        dotnet-version: 10.0.x
+        dotnet-version: 11.0.x
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
       run: dotnet build Content/Cnsola.csproj
     - name: Pack
       run: dotnet pack Cnsola.Project.Template.csproj -o $NUPKGS --include-symbols
-    - if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || contains(github.ref, 'tags'))
+    - if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || contains(github.ref, 'tags'))
       name: Publish MyGet
       run: dotnet nuget push "$NUPKGS/*.nupkg" --skip-duplicate --source $MYGET_FEED -k ${{ secrets.MYGET_KEY }}
 env:
