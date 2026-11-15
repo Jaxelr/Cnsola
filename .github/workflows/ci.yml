@@ -1,6 +1,9 @@
 name: .NET
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ '**' ]
+  pull_request:
 
 jobs:
   build:
@@ -20,13 +23,9 @@ jobs:
       run: dotnet build Content/Cnsola.csproj
     - name: Pack
       run: dotnet pack Cnsola.Project.Template.csproj -o $NUPKGS --include-symbols
-    - if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || contains(github.ref, 'tags'))
-      name: Publish MyGet
-      run: dotnet nuget push "$NUPKGS/*.nupkg" --skip-duplicate --source $MYGET_FEED -k ${{ secrets.MYGET_KEY }}
 env:
   DOTNET_CLI_TELEMETRY_OPTOUT: 1
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
   DOTNET_SYSTEM_CONSOLE_ALLOW_ANSI_COLOR_REDIRECTION: 1
   TERM: xterm
-  MYGET_FEED: https://www.myget.org/F/cnsola/api/v2/package
   NUPKGS: ./.nupkgs
