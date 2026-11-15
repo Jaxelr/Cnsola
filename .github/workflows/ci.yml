@@ -23,6 +23,14 @@ jobs:
       run: dotnet build Content/Cnsola.csproj
     - name: Pack
       run: dotnet pack Cnsola.Project.Template.csproj -o $NUPKGS --include-symbols
+    - name: Upload packages
+      uses: actions/upload-artifact@v7
+      with:
+        name: cnsola-packages
+        path: |
+          ${{ env.NUPKGS }}/*.nupkg
+          ${{ env.NUPKGS }}/*.snupkg
+        include-hidden-files: true
 env:
   DOTNET_CLI_TELEMETRY_OPTOUT: 1
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1

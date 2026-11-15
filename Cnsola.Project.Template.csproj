@@ -19,7 +19,6 @@
 		<NoWarn>NU5128</NoWarn>
 		<PackageReleaseNotes>Update template to dotnet 11</PackageReleaseNotes>
 		<PackageReadmeFile>readme.md</PackageReadmeFile>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 
 	<ItemGroup>
